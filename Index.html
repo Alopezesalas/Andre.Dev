@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eng. Andre Lpz E | Portfolio</title>
+    <!-- Fuentes Google: Space Grotesk (Títulos) y Inter (Texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Canvas para el fondo de partículas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Barra de Navegación Flotante -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="bracket">&lt;</span>Andre<span class="dot">.</span>Dev<span class="bracket">/&gt;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-link active" data-page="inicio">Inicio</a></li>
+            <li><a href="#" class="nav-link" data-page="experiencia">Trayectoria</a></li>
+            <li><a href="#" class="nav-link" data-page="documentos">Archivos</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        
+        <!-- SECCIÓN: INICIO (Hero) -->
+        <section id="inicio" class="page active">
+            <div class="hero-layout">
+                <div class="hero-text">
+                    <div class="greeting">Hola, soy</div>
+                    <h1 class="glitch-text" data-text="Andrea Carolina">Andrea Carolina Lopez Esalas</h1>
+                    <h2 class="gradient-text">Ingeniera De Software en Formación</h2>
+                    <p class="description">
+                        Soy una estudiante apasionada por la tecnologia, el desarrollo web y la creacion de soluciones digitales. Me caracterizo por mi compromiso, creatividad y capacidad para resolver problemas, siempre buscando aprender nuevas herramientas. Cuento con habilidades para el analisis, trabajo en equipo y aprendizaje continuo. Mi objetivo es transformar ideas en soluciones digitales funcionales, eficientes e innovadoras.
+            
+                    </p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag"></span>
+                        <span class="tech-tag"></span>
+                        <span class="tech-tag"></span>
+                    </div>
+
+                    <div class="contact-data">
+                        <div class="data-row">
+                            <span class="icon">📍</span> Cartagena, Colombia
+                        </div>
+                        <div class="data-row">
+                            <span class="icon">📧</span> Andrealopezesalas@gmail.com
+                        </div>
+                        <div class="data-row">
+                            <span class="icon">📱</span> +57 300 320 0267
+                        </div>
+                    </div>
+
+                    <div class="profile-form-card">
+                        <h3>Perfil de contacto</h3>
+                        <form id="profileForm" class="profile-form">
+                            <div class="form-row">
+                                <label>
+                                    Nombre
+                                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                                </label>
+                                <label>
+                                    Email
+                                    <input type="email" name="email" placeholder="tu@email.com" required>
+                                </label>
+                            </div>
+
+                            <label>
+                                Asunto
+                                <input type="text" name="asunto" placeholder="Proyecto o consulta">
+                            </label>
+
+                            <label>
+                                Mensaje
+                                <textarea name="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                            </label>
+
+                            <button type="submit" class="submit-btn">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper tilt-element">
+                    <div class="glowing-circle"></div>
+                    <img src="Recursos/Fotoportada.jpeg" alt="Andrea Lopez" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: EXPERIENCIA -->
+        <section id="experiencia" class="page">
+            <div class="section-header">
+                <h2>Trayectoria Profesional</h2>
+                <div class="line-decor"></div>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Item 1 -->
+                <div class="timeline-card tilt-card">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content-inner">
+                        <h3>Bachiller Académico</h3>
+                        <h4>I.E. Soledad Acosta De Samper</h4>
+                        <p>Enfoque en ciencias y tecnología. Solidificación de bases analíticas y metodológicas para la ingeniería.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="timeline-card tilt-card">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content-inner">
+                        <h3>Fotógrafa & Camarógrafa</h3>
+                        <h4>I.C. JEV</h4>
+                        <p>Dirección de arte visual y captura de eventos. Manejo de equipo profesional y post-producción digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: DOCUMENTOS -->
+        <section id="documentos" class="page">
+            <div class="section-header">
+                <h2>Diploma</h2>
+                <div class="line-decor"></div>
+            </div>
+            
+            <div class="grid-gallery" id="docsGallery">
+                <!-- Generado por JS -->
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- Generador de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Lógica JavaScript -->
+    <script src="Estructura.js"></script>
+</body>
+</html>
