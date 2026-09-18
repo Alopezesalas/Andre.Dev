@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const docs = [
-        { titulo: "diploma Bachiller", sub: "Certificado Oficial", icon: "🎓", file: "Recursos/Diploma%20Bachiller%20Academico%20.pdf" }
+        { titulo: "diploma Bachiller", sub: "Certificado Oficial", icon: "🎓", file: "diploma%20Bachiller%20Academico.pdf" }
     ];
 
     const gallery = document.getElementById('docsGallery');
